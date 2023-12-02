@@ -2,6 +2,7 @@ package mySpringStudy.core;
 
 import mySpringStudy.core.discount.DiscountPolicy;
 import mySpringStudy.core.discount.FixDiscountPolicy;
+import mySpringStudy.core.discount.RateDiscountPolicy;
 import mySpringStudy.core.member.MemberRepository;
 import mySpringStudy.core.member.MemberService;
 import mySpringStudy.core.member.MemberServiceImpl;
@@ -23,7 +24,8 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+//        return new FixDiscountPolicy(); // 고정 할인 정책
+        return new RateDiscountPolicy();  // 비율 할인 정책
     }
 
 }
