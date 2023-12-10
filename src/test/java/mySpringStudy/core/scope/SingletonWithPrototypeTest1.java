@@ -56,15 +56,12 @@ public class SingletonWithPrototypeTest1 {
     @Scope("prototype")
     static class PrototypeBean{
         private int count;
-
         public void addCount(){
             count++;
         }
-
         public int getCount(){
             return count;
         }
-
         @PostConstruct
         public void init(){
             System.out.println("PrototypeBean.init" + this);
