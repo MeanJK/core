@@ -52,7 +52,6 @@ public class SingletonWithPrototypeTest1 {
             return count;
         }
     }
-
     @Scope("prototype")
     static class PrototypeBean{
         private int count;
