@@ -12,6 +12,7 @@ import javax.inject.Provider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class SingletonWithPrototypeTest1 {
     
     @Test
