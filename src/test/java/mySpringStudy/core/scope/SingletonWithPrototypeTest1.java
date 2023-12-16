@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SingletonWithPrototypeTest1 {
-    
     @Test
     void prototypeFind() throws Exception {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
