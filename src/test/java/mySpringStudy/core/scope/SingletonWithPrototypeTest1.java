@@ -25,7 +25,6 @@ public class SingletonWithPrototypeTest1 {
         bean2.addCount();
         assertThat(bean2.getCount()).isEqualTo(1);
     }
-
     @Test
     void SingletonClientUseTest() throws Exception {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(ClientBean.class, PrototypeBean.class);
