@@ -40,7 +40,6 @@ public class SingletonWithPrototypeTest1 {
     static class ClientBean{
         @Autowired
         private Provider<PrototypeBean> prototypeBeanProvider;
-
         public int logic(){
             PrototypeBean prototypeBean = prototypeBeanProvider.get();
             prototypeBean.addCount();
