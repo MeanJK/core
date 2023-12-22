@@ -21,15 +21,12 @@ public class SingletonTest {
         assertThat(bean1).isSameAs(bean2);
         ac.close();
     }
-
     @Scope("singleton")
     static class Singleton{
-
         @PostConstruct
         public void init(){
             System.out.println("Singleton.init");
         }
-
         @PreDestroy
         public void destroy(){
             System.out.println("Singleton.destroy");
