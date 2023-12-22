@@ -16,7 +16,6 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.*;
 
 public class AllBeanTest {
-
     @Test
     void testAllBean() throws Exception {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class, DiscountService.class);
@@ -25,11 +24,9 @@ public class AllBeanTest {
         int discountPrice = service.discount(member, 10000, "fixDiscountPolicy");
         assertThat(service).isInstanceOf(DiscountService.class);
         assertThat(discountPrice).isEqualTo(1000);
-
         int rateDiscountPrice = service.discount(member, 20000, "rateDiscountPolicy");
         Assertions.assertThat(rateDiscountPrice).isEqualTo(2000);
     }
-
     static class DiscountService{
         private final Map<String, DiscountPolicy> policyMap;
         private final List<DiscountPolicy> policies;
